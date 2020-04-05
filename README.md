@@ -4,10 +4,10 @@
 
 <h3>Description:</h3>
 
-My final project is "____________" It is a control based game. In the game, the player has to escape the coronavirus and during the game the player can collect powerups such as a mask, handsanitizers etc...
+My project is "____________" It is a control based game. In the game, the player has to escape the infected people and move away from them. Throughthis game the player can learn about social distancing and also the use of masks. 
 
 
 <h3>Interaction:<h3>
 
-<h4>The user is able to actually play the game and also learn about the virus at the same time as the 'powerups' in the game actually help in realy life.</h4>
+<h4>The user is able to actually play the game and also learn about the virus at the same time.</h4>
 
