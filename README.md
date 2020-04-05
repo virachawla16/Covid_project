@@ -1,5 +1,5 @@
 # Covid_project
- <h2>This is my program based on the theme of COVID-19 that includes a library that I have not used before..</h2>
+ <h2>This is my program based on the theme of COVID-19 that includes a library that I have not used before.</h2>
 
 
 <h3>Description:</h3>
