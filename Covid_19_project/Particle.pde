@@ -5,9 +5,11 @@ class Particle {
   PVector acceleration;
   float lifespan;
   float alpha;
+  
+
 
   Particle() {
-    location = new PVector(400, 401);
+    location = new PVector(A, B);
     acceleration = new PVector(0, 0.05);
     velocity = new PVector(random(-1, 1), random(-2, 0));
     lifespan = random(200-255);
@@ -17,10 +19,10 @@ class Particle {
   Particle(PVector _location) {
     location = _location.copy();
     acceleration = new PVector(0, 0.05);
-    velocity = new PVector(random(-1, 1), random(-2, 0));
+    velocity = new PVector(random(-2, 0), random(-2, 0));
 
     lifespan = random(200-255);
-    alpha = 255;
+    alpha = 100;
   }
 
 
@@ -38,7 +40,7 @@ class Particle {
 
   void render() {
     stroke(0, lifespan);
-    fill(252, 173, 179, alpha);
+    fill(85, 191, 62, alpha);
     ellipse(location.x, location.y, 8, 8);
   }
 
