@@ -1,9 +1,6 @@
 class ParticleSystem {
   ArrayList<Particle> pList = new ArrayList<Particle>();
 
-
-
-
   PVector origin;
 
   ParticleSystem(PVector location) {

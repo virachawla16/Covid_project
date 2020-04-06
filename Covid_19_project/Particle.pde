@@ -7,7 +7,7 @@ class Particle {
   float alpha;
 
   Particle() {
-    location = new PVector(400,401);
+    location = new PVector(400, 401);
     acceleration = new PVector(0, 0.05);
     velocity = new PVector(random(-1, 1), random(-2, 0));
     lifespan = random(200-255);

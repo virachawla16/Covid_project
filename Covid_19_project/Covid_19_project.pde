@@ -1,14 +1,20 @@
 PImage sickperson;
+PImage girl;
 PVector Position;
 PVector Velocity;
 float [] sickpersonX = new float[6];
 float [] sickpersonY = new float[6];
 
-ParticleSystem ps = new ParticleSystem(new PVector(400,401));
+ParticleSystem ps = new ParticleSystem(new PVector(400, 401));
 
 void setup()
 {
   size(800, 800);
+
+  girl = loadImage("girl.png");
+  girl.resize(400, 400);
+
+
   sickperson = loadImage("sickboy.png");
   sickperson.resize(145, 145);
 
@@ -25,6 +31,10 @@ void setup()
 void draw()
 {
   background(255, 255, 255);
+
+  image(girl, mouseX, mouseY);
+  imageMode(CENTER);
+
   image(sickperson, 400, 400);
 
   ps.DrawParticle();
