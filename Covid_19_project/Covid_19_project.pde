@@ -16,7 +16,7 @@ void setup()
 
 
   sickperson = loadImage("sickboy.png");
-  sickperson.resize(145, 145);
+  sickperson.resize(230, 230);
 
   ps.addParticle();
 
@@ -35,12 +35,12 @@ void draw()
   image(girl, mouseX, mouseY);
   imageMode(CENTER);
 
-  image(sickperson, 400, 400);
+  image(sickperson, 230, 230);
 
   ps.DrawParticle();
 
   for (int i=0; i<6; i++)
   {
-    image(sickperson, sickpersonX[i], sickpersonY[i], 145, 145);
+    image(sickperson, sickpersonX[i], sickpersonY[i], 230, 230);
   }
 }
