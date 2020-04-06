@@ -4,7 +4,7 @@
 
 <h3>Description:</h3>
 
-My project is "____________" It is a control based game. In the game, the player has to escape the infected people and move away from them. Throughthis game the player can learn about social distancing and also the use of masks. 
+My project is a control based game. In the game, the player has to escape the infected people and move away from them. Throughthis game the player can learn about social distancing and also the use of masks. 
 
 
 <h3>Interaction:<h3>
