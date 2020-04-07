@@ -4,7 +4,7 @@
 
 <h3>Description:</h3>
 
-My project is a control based game. In the game, the player has to escape the infected people and move away from them. Throughthis game the player can learn about social distancing and also the use of masks. In my game, when a regular person comes to close to the infected person , the screen goes red. This teaches the players about social distancing. 
+My project is a control based game. In the game, the player has to escape the infected people and move away from them. Throughthis game the player can learn about social distancing and also the use of masks. In my game, when a regular person comes to close to the infected person , the girl becomes grey, meaning she has gotten infected. This teaches the players about social distancing. 
 
 
 <h3>Interaction:<h3>
