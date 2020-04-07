@@ -20,8 +20,10 @@ class ParticleSystem {
       Particle p = pList.get(i);
       p.reload();
       p.render();
+      if (p.isDead()) {
+        pList.remove(i);
+      }
     }
-    addParticle();
   }
 
 

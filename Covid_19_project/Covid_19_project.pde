@@ -2,23 +2,26 @@ PImage sickperson;
 PImage girl;
 PVector Position;
 PVector Velocity;
+PImage School;
 
-float [] sickpersonX = new float[3];
-float [] sickpersonY = new float[3];
+float DistBoy1;
+float DistBoy2;
+float DistBoy3;
+float DistBoy4;
 
 
-
-float A = (float) random (30, 700);
-float B = (float) random (30, 700);
-
-float DistX;
-float DistY;
 
 float GirlX = mouseX;
 float GirlY = mouseY;
 
 
-ParticleSystem ps = new ParticleSystem(new PVector(A, B));
+SickBoy boy1;
+SickBoy boy2;
+SickBoy boy3;
+SickBoy boy4;
+
+PFont Serif;
+
 
 void setup() {
   size(800, 800);
@@ -28,54 +31,93 @@ void setup() {
 
 
   sickperson = loadImage("sickboy.png");
-  sickperson.resize(200, 200);
+  sickperson.resize(300, 300);
 
-  ps.addParticle();
+  boy1 = new SickBoy();
+  boy2 = new SickBoy();
+  boy3 = new SickBoy();
+  boy4 = new SickBoy();
 
-  for (int i=1; i<3; i++)
-
-  {
-    sickpersonX [i] = A;
-    sickpersonY [i] = B;
-  }
+  Serif = loadFont("kk.vlw");
+  
+  School = loadImage("classroom.jpg");
+   School.resize(800, 800);
 }
 
 void draw()
 {
-  background(255, 255, 255);
+  background(0);
+  
+  image(School,400,400);
+  
 
-
-
-
+  fill(255);
+  textFont(Serif);
+  text("Move your cursor around to see the effects", 30, 50);
+  text("Of what happens when social distancing is not maintained", 30, 80);
+  text("When the girl gets too close to the infected people", 30, 110);
+  text("she becomes grey, meaning she is infected", 30, 140);
 
 
   image(girl, mouseX, mouseY);
   imageMode(CENTER);
 
-  image(sickperson, 230, 230);
+  DistBoy1 = dist(mouseX, mouseY, boy1._x, boy1._y);
 
-  ps.DrawParticle();
-  
-  DistX = mouseX - A;
-  
-  //DistY = mouseY - B;
-  
-  if (DistX < 40)
-  {
-    
-   background(234,43,43);
-   
-  }
-  
-  //if (DistY < 20)
-  //{
-    
-  // background(234,43,43);
-   
-  //}
 
-  for (int i=1; i<3; i++)
+  if (DistBoy1 < 150)
   {
-    image(sickperson, A, B, 200, 200);
+    image(girl, mouseX, mouseY);
+
+    //image(sickperson);
+
+    filter(GRAY);
   }
+
+  DistBoy2 = dist(mouseX, mouseY, boy2._x, boy2._y); 
+
+  if (DistBoy2 <150)
+  {
+    image(girl, mouseX, mouseY);
+
+    //image(sickperson);
+
+    filter(GRAY);
+  }
+
+  DistBoy3 = dist(mouseX, mouseY, boy3._x, boy3._y);
+
+
+  if (DistBoy3 < 150)
+  {
+    image(girl, mouseX, mouseY);
+
+    //image(sickperson);
+
+    filter(GRAY);
+  }
+
+  DistBoy4 = dist(mouseX, mouseY, boy4._x, boy4._y);
+
+  if (DistBoy4 < 150)
+  {
+    image(girl, mouseX, mouseY);
+
+    //image(sickperson);
+
+    filter(GRAY);
+  }
+
+
+  boy1.Draw();
+  boy1.Update();
+
+  boy2.Draw();
+  boy2.Update();
+
+  boy3.Draw();
+  boy3.Update();
+
+  boy4.Draw();
+  boy4.Update();
 }

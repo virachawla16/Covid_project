@@ -9,10 +9,10 @@ class Particle {
 
 
   Particle() {
-    location = new PVector(A, B);
+    location = new PVector(100, 100);
     acceleration = new PVector(0, 0.05);
     velocity = new PVector(random(-1, 1), random(-2, 0));
-    lifespan = random(200-255);
+    lifespan = 100;
     alpha = 255;
   }
 
@@ -21,7 +21,7 @@ class Particle {
     acceleration = new PVector(0, 0.05);
     velocity = new PVector(random(-2, 0), random(-2, 0));
 
-    lifespan = random(200-255);
+    lifespan = 100;
     alpha = 100;
   }
 
@@ -34,8 +34,8 @@ class Particle {
   void reload() {
     velocity.add(acceleration);
     location.add(velocity);
-    lifespan -= -2.0;
-    alpha -= 0;
+    lifespan -= 2;
+    alpha -= 1;
   }
 
   void render() {
